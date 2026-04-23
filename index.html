@@ -1,1 +1,346 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>acevif</title>
+  <meta
+    name="description"
+    content="acevif's simple home page with social links and selected open source contributions."
+  >
+  <style>
+    :root {
+      --bg: #f4efe5;
+      --panel: rgba(255, 252, 247, 0.82);
+      --panel-strong: #fffaf2;
+      --text: #1d1a17;
+      --muted: #655b52;
+      --line: rgba(29, 26, 23, 0.12);
+      --accent: #ba4a00;
+      --accent-2: #145a73;
+      --shadow: 0 24px 60px rgba(47, 35, 23, 0.12);
+      --radius: 24px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(255, 182, 92, 0.35), transparent 32%),
+        radial-gradient(circle at top right, rgba(20, 90, 115, 0.18), transparent 28%),
+        linear-gradient(180deg, #fbf6ee 0%, var(--bg) 100%);
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .page {
+      width: min(960px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 56px 0 72px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 32px;
+      border: 1px solid var(--line);
+      border-radius: calc(var(--radius) + 8px);
+      background: var(--panel);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(18px);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -5% -35% auto;
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(186, 74, 0, 0.18), transparent 68%);
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      font-size: 0.8rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent-2);
+    }
+
+    h1,
+    h2,
+    p {
+      margin: 0;
+    }
+
+    h1 {
+      max-width: 10ch;
+      font-size: clamp(3rem, 10vw, 5.6rem);
+      line-height: 0.94;
+      letter-spacing: -0.05em;
+    }
+
+    .lead {
+      max-width: 42rem;
+      margin-top: 18px;
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: var(--muted);
+    }
+
+    .grid {
+      display: grid;
+      gap: 20px;
+      margin-top: 24px;
+      grid-template-columns: repeat(12, 1fr);
+    }
+
+    .card {
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--panel-strong);
+      box-shadow: var(--shadow);
+    }
+
+    .links {
+      grid-column: span 5;
+    }
+
+    .oss {
+      grid-column: span 7;
+    }
+
+    .section-title {
+      font-size: 1.2rem;
+      letter-spacing: -0.03em;
+    }
+
+    .section-copy {
+      margin-top: 8px;
+      font-size: 0.96rem;
+      line-height: 1.7;
+      color: var(--muted);
+    }
+
+    .link-list,
+    .contrib-list {
+      margin: 18px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .link-list li + li,
+    .contrib-list li + li {
+      margin-top: 12px;
+    }
+
+    .link-item,
+    .contrib-item {
+      display: block;
+      padding: 16px 18px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      text-decoration: none;
+      background: rgba(255, 255, 255, 0.52);
+      transition:
+        transform 160ms ease,
+        border-color 160ms ease,
+        background-color 160ms ease;
+    }
+
+    .link-item:hover,
+    .contrib-item:hover {
+      transform: translateY(-1px);
+      border-color: rgba(186, 74, 0, 0.35);
+      background: rgba(255, 255, 255, 0.85);
+    }
+
+    .link-label,
+    .contrib-repo {
+      display: block;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .link-meta,
+    .contrib-title {
+      display: block;
+      margin-top: 4px;
+      font-size: 0.94rem;
+      line-height: 1.55;
+      color: var(--muted);
+    }
+
+    .contrib-title a {
+      color: var(--accent-2);
+      text-decoration-thickness: 0.08em;
+      text-underline-offset: 0.16em;
+    }
+
+    .footer {
+      margin-top: 18px;
+      font-size: 0.84rem;
+      color: var(--muted);
+    }
+
+    @media (max-width: 760px) {
+      .page {
+        width: min(100% - 20px, 960px);
+        padding: 24px 0 40px;
+      }
+
+      .hero,
+      .card {
+        padding: 22px;
+      }
+
+      .links,
+      .oss {
+        grid-column: 1 / -1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <p class="eyebrow">acevif.github.io</p>
+      <h1>acevif</h1>
+      <p class="lead">
+        A software engineer working in Tokyo, mostly developing for iOS.
+        This page is a small index to social profiles and a few selected open source contributions.
+      </p>
+    </section>
+
+    <section class="grid" aria-label="Links and selected open source contributions">
+      <div class="card links">
+        <h2 class="section-title">Links</h2>
+        <p class="section-copy">
+          Public profiles and writing.
+        </p>
+        <ul class="link-list">
+          <li>
+            <a class="link-item" href="https://x.com/acevif" target="_blank" rel="noreferrer">
+              <span class="link-label">X</span>
+              <span class="link-meta">@acevif</span>
+            </a>
+          </li>
+          <li>
+            <a class="link-item" href="https://www.linkedin.com/in/kazutoishihara" target="_blank" rel="noreferrer">
+              <span class="link-label">LinkedIn</span>
+              <span class="link-meta">Kazuto Ishihara</span>
+            </a>
+          </li>
+          <li>
+            <a class="link-item" href="https://qiita.com/acevif" target="_blank" rel="noreferrer">
+              <span class="link-label">Qiita</span>
+              <span class="link-meta">@acevif</span>
+            </a>
+          </li>
+          <li>
+            <a class="link-item" href="https://github.com/acevif" target="_blank" rel="noreferrer">
+              <span class="link-label">GitHub</span>
+              <span class="link-meta">Profile and repositories</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="card oss">
+        <h2 class="section-title">Selected OSS Work</h2>
+        <p class="section-copy">
+          A few public repositories and external contributions.
+        </p>
+        <ul class="contrib-list">
+          <li>
+            <a class="contrib-item" href="https://github.com/acevif/ignore" target="_blank" rel="noreferrer">
+              <span class="contrib-repo">acevif/ignore</span>
+              <span class="contrib-title">A personal developer environment and tooling repository.</span>
+            </a>
+          </li>
+          <li>
+            <a class="contrib-item" href="https://github.com/acevif/licenseplist-nix" target="_blank" rel="noreferrer">
+              <span class="contrib-repo">acevif/licenseplist-nix</span>
+              <span class="contrib-title">Nix packaging and distribution for LicensePlist.</span>
+            </a>
+          </li>
+          <li>
+            <a class="contrib-item" href="https://github.com/mono0926/LicensePlist/pull/202" target="_blank" rel="noreferrer">
+              <span class="contrib-repo">mono0926/LicensePlist</span>
+              <span class="contrib-title">PR #202: Public contribution to LicensePlist.</span>
+            </a>
+          </li>
+          <li>
+            <a class="contrib-item" href="https://github.com/mono0926/LicensePlist/pull/201" target="_blank" rel="noreferrer">
+              <span class="contrib-repo">mono0926/LicensePlist</span>
+              <span class="contrib-title">PR #201: Public contribution to LicensePlist.</span>
+            </a>
+          </li>
+          <li>
+            <a class="contrib-item" href="https://github.com/mono0926/LicensePlist/pull/200" target="_blank" rel="noreferrer">
+              <span class="contrib-repo">mono0926/LicensePlist</span>
+              <span class="contrib-title">PR #200: Public contribution to LicensePlist.</span>
+            </a>
+          </li>
+          <li>
+            <a class="contrib-item" href="https://github.com/acevif/chatgpt-ctrl-d-restore" target="_blank" rel="noreferrer">
+              <span class="contrib-repo">acevif/chatgpt-ctrl-d-restore</span>
+              <span class="contrib-title">A small utility repository to restore ChatGPT Ctrl+D behavior.</span>
+            </a>
+          </li>
+          <li>
+            <a class="contrib-item" href="https://github.com/coderabbitai/git-worktree-runner/pull/165" target="_blank" rel="noreferrer">
+              <span class="contrib-repo">coderabbitai/git-worktree-runner</span>
+              <span class="contrib-title">PR #165: Fix hook execution so stdin-reading hooks do not skip subsequent hooks.</span>
+            </a>
+          </li>
+          <li>
+            <a class="contrib-item" href="https://github.com/nicklockwood/SwiftFormat/pull/2474" target="_blank" rel="noreferrer">
+              <span class="contrib-repo">nicklockwood/SwiftFormat</span>
+              <span class="contrib-title">PR #2474: Add Nix devShell installation guidance.</span>
+            </a>
+          </li>
+          <li>
+            <a class="contrib-item" href="https://github.com/Swinject/Swinject/pull/370" target="_blank" rel="noreferrer">
+              <span class="contrib-repo">Swinject/Swinject</span>
+              <span class="contrib-title">PR #370: Public contribution to Swinject.</span>
+            </a>
+          </li>
+          <li>
+            <a class="contrib-item" href="https://github.com/Swinject/Swinject/pull/332" target="_blank" rel="noreferrer">
+              <span class="contrib-repo">Swinject/Swinject</span>
+              <span class="contrib-title">PR #332: Public contribution to Swinject.</span>
+            </a>
+          </li>
+          <li>
+            <a class="contrib-item" href="https://github.com/NixOS/nixos-search/pull/1165" target="_blank" rel="noreferrer">
+              <span class="contrib-repo">NixOS/nixos-search</span>
+              <span class="contrib-title">PR #1165: Contribute package metadata for <code>acevif/swiftformat-nix</code>.</span>
+            </a>
+          </li>
+          <li>
+            <a class="contrib-item" href="https://github.com/simplex-chat/simplex-chat/pull/4867" target="_blank" rel="noreferrer">
+              <span class="contrib-repo">simplex-chat/simplex-chat</span>
+              <span class="contrib-title"><a href="https://github.com/simplex-chat/simplex-chat/issues/4837" target="_blank" rel="noreferrer">Issue #4837</a> + PR #4867 / merged as <a href="https://github.com/simplex-chat/simplex-chat/pull/5771" target="_blank" rel="noreferrer">PR #5771</a>: iOS Xcode 16 stack overflow workaround. Found, investigated, and fixed by me.</span>
+            </a>
+          </li>
+        </ul>
+        <p class="footer">
+          This page is intentionally minimal and easy to maintain as a single static file.
+        </p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
