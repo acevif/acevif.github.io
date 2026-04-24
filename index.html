@@ -180,12 +180,18 @@
       font-size: 0.94rem;
       line-height: 1.55;
       color: var(--muted);
+      overflow-wrap: anywhere;
+      word-break: normal;
     }
 
     .contrib-title a {
       color: var(--accent-2);
       text-decoration-thickness: 0.08em;
       text-underline-offset: 0.16em;
+    }
+
+    .contrib-item .inline-link {
+      display: inline;
     }
 
     .footer {
@@ -232,26 +238,26 @@
         <ul class="link-list">
           <li>
             <a class="link-item" href="https://x.com/acevif" target="_blank" rel="noreferrer">
-              <span class="link-label">X</span>
-              <span class="link-meta">@acevif</span>
+              <div class="link-label">X</div>
+              <div class="link-meta">@acevif</div>
             </a>
           </li>
           <li>
             <a class="link-item" href="https://www.linkedin.com/in/kazutoishihara" target="_blank" rel="noreferrer">
-              <span class="link-label">LinkedIn</span>
-              <span class="link-meta">Kazuto Ishihara</span>
+              <div class="link-label">LinkedIn</div>
+              <div class="link-meta">Kazuto Ishihara</div>
             </a>
           </li>
           <li>
             <a class="link-item" href="https://qiita.com/acevif" target="_blank" rel="noreferrer">
-              <span class="link-label">Qiita</span>
-              <span class="link-meta">@acevif</span>
+              <div class="link-label">Qiita</div>
+              <div class="link-meta">@acevif</div>
             </a>
           </li>
           <li>
             <a class="link-item" href="https://github.com/acevif" target="_blank" rel="noreferrer">
-              <span class="link-label">GitHub</span>
-              <span class="link-meta">Profile and repositories</span>
+              <div class="link-label">GitHub</div>
+              <div class="link-meta">Profile and repositories</div>
             </a>
           </li>
         </ul>
@@ -265,80 +271,78 @@
         <ul class="contrib-list">
           <li>
             <a class="contrib-item" href="https://github.com/acevif/ignore" target="_blank" rel="noreferrer">
-              <span class="contrib-repo">acevif/ignore</span>
-              <span class="contrib-title">A personal developer environment and tooling repository.</span>
-            </a>
-          </li>
-          <li>
-            <a class="contrib-item" href="https://github.com/acevif/licenseplist-nix" target="_blank" rel="noreferrer">
-              <span class="contrib-repo">acevif/licenseplist-nix</span>
-              <span class="contrib-title">Nix packaging and distribution for LicensePlist.</span>
-            </a>
-          </li>
-          <li>
-            <a class="contrib-item" href="https://github.com/mono0926/LicensePlist/pull/202" target="_blank" rel="noreferrer">
-              <span class="contrib-repo">mono0926/LicensePlist</span>
-              <span class="contrib-title">PR #202: Public contribution to LicensePlist.</span>
-            </a>
-          </li>
-          <li>
-            <a class="contrib-item" href="https://github.com/mono0926/LicensePlist/pull/201" target="_blank" rel="noreferrer">
-              <span class="contrib-repo">mono0926/LicensePlist</span>
-              <span class="contrib-title">PR #201: Public contribution to LicensePlist.</span>
-            </a>
-          </li>
-          <li>
-            <a class="contrib-item" href="https://github.com/mono0926/LicensePlist/pull/200" target="_blank" rel="noreferrer">
-              <span class="contrib-repo">mono0926/LicensePlist</span>
-              <span class="contrib-title">PR #200: Public contribution to LicensePlist.</span>
+              <div class="contrib-repo">acevif/ignore</div>
+              <div class="contrib-title">A personal developer environment and tooling repository.</div>
             </a>
           </li>
           <li>
             <a class="contrib-item" href="https://github.com/acevif/chatgpt-ctrl-d-restore" target="_blank" rel="noreferrer">
-              <span class="contrib-repo">acevif/chatgpt-ctrl-d-restore</span>
-              <span class="contrib-title">A small utility repository to restore ChatGPT Ctrl+D behavior.</span>
+              <div class="contrib-repo">acevif/chatgpt-ctrl-d-restore</div>
+              <div class="contrib-title">A small utility repository to restore ChatGPT Ctrl+D behavior.</div>
+            </a>
+          </li>
+          <li>
+            <a class="contrib-item" href="https://github.com/acevif/licenseplist-nix" target="_blank" rel="noreferrer">
+              <div class="contrib-repo">acevif/licenseplist-nix</div>
+              <div class="contrib-title">Nix packaging and distribution for LicensePlist.</div>
+            </a>
+          </li>
+          <li>
+            <a class="contrib-item" href="https://github.com/acevif/swiftformat-nix" target="_blank" rel="noreferrer">
+              <div class="contrib-repo">acevif/swiftformat-nix</div>
+              <div class="contrib-title">Nix packaging and distribution for SwiftFormat.</div>
+            </a>
+          </li>
+          <li>
+            <div class="contrib-item">
+              <div class="contrib-repo">simplex-chat/simplex-chat Issue #4837 + PR #4867 / merged as PR #5771</div>
+              <div class="contrib-title">iOS Xcode 16 stack overflow workaround. Found, investigated, and fixed by me.</div>
+            </div>
+          </li>
+          <li>
+            <a class="contrib-item" href="https://github.com/mono0926/LicensePlist/pull/202" target="_blank" rel="noreferrer">
+              <div class="contrib-repo">mono0926/LicensePlist PR #202</div>
+            </a>
+          </li>
+          <li>
+            <a class="contrib-item" href="https://github.com/mono0926/LicensePlist/pull/201" target="_blank" rel="noreferrer">
+              <div class="contrib-repo">mono0926/LicensePlist PR #201</div>
+            </a>
+          </li>
+          <li>
+            <a class="contrib-item" href="https://github.com/mono0926/LicensePlist/pull/200" target="_blank" rel="noreferrer">
+              <div class="contrib-repo">mono0926/LicensePlist PR #200</div>
             </a>
           </li>
           <li>
             <a class="contrib-item" href="https://github.com/coderabbitai/git-worktree-runner/pull/165" target="_blank" rel="noreferrer">
-              <span class="contrib-repo">coderabbitai/git-worktree-runner</span>
-              <span class="contrib-title">PR #165: Fix hook execution so stdin-reading hooks do not skip subsequent hooks.</span>
+              <div class="contrib-repo">coderabbitai/git-worktree-runner PR #165</div>
+              <div class="contrib-title">fix hook execution so stdin-reading hooks do not skip subsequent hooks.</div>
             </a>
           </li>
           <li>
             <a class="contrib-item" href="https://github.com/nicklockwood/SwiftFormat/pull/2474" target="_blank" rel="noreferrer">
-              <span class="contrib-repo">nicklockwood/SwiftFormat</span>
-              <span class="contrib-title">PR #2474: Add Nix devShell installation guidance.</span>
+              <div class="contrib-repo">nicklockwood/SwiftFormat PR #2474</div>
+              <div class="contrib-title">add Nix devShell installation guidance.</div>
             </a>
           </li>
           <li>
             <a class="contrib-item" href="https://github.com/Swinject/Swinject/pull/370" target="_blank" rel="noreferrer">
-              <span class="contrib-repo">Swinject/Swinject</span>
-              <span class="contrib-title">PR #370: Public contribution to Swinject.</span>
+              <div class="contrib-repo">Swinject/Swinject PR #370</div>
             </a>
           </li>
           <li>
             <a class="contrib-item" href="https://github.com/Swinject/Swinject/pull/332" target="_blank" rel="noreferrer">
-              <span class="contrib-repo">Swinject/Swinject</span>
-              <span class="contrib-title">PR #332: Public contribution to Swinject.</span>
+              <div class="contrib-repo">Swinject/Swinject PR #332</div>
             </a>
           </li>
           <li>
             <a class="contrib-item" href="https://github.com/NixOS/nixos-search/pull/1165" target="_blank" rel="noreferrer">
-              <span class="contrib-repo">NixOS/nixos-search</span>
-              <span class="contrib-title">PR #1165: Contribute package metadata for <code>acevif/swiftformat-nix</code>.</span>
-            </a>
-          </li>
-          <li>
-            <a class="contrib-item" href="https://github.com/simplex-chat/simplex-chat/pull/4867" target="_blank" rel="noreferrer">
-              <span class="contrib-repo">simplex-chat/simplex-chat</span>
-              <span class="contrib-title"><a href="https://github.com/simplex-chat/simplex-chat/issues/4837" target="_blank" rel="noreferrer">Issue #4837</a> + PR #4867 / merged as <a href="https://github.com/simplex-chat/simplex-chat/pull/5771" target="_blank" rel="noreferrer">PR #5771</a>: iOS Xcode 16 stack overflow workaround. Found, investigated, and fixed by me.</span>
+              <div class="contrib-repo">NixOS/nixos-search PR #1165</div>
+              <div class="contrib-title">contribute package metadata for <code>acevif/swiftformat-nix</code>.</div>
             </a>
           </li>
         </ul>
-        <p class="footer">
-          This page is intentionally minimal and easy to maintain as a single static file.
-        </p>
       </div>
     </section>
   </main>
